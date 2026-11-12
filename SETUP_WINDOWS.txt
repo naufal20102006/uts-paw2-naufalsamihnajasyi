@@ -1,0 +1,14 @@
+PANDUAN SINGKAT WINDOWS
+
+1. Ekstrak ZIP.
+2. Buka folder uts-paw2-naufalsamihnajasyi di VS Code.
+3. Buka Terminal > New Terminal.
+4. Jalankan: npm install
+5. Duplikat .env.example dan ubah nama salinannya menjadi .env.
+6. Sesuaikan DB_URI dengan MongoDB yang digunakan dan isi API_KEY.
+7. Pastikan MongoDB aktif.
+8. Jalankan (opsional): npm run seed
+9. Jalankan: npm start
+10. Buka http://localhost:3000
+
+Untuk request POST, PUT, DELETE, tambahkan header x-api-key dengan nilai yang sama seperti API_KEY pada .env.

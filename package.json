@@ -1,0 +1,29 @@
+{
+  "name": "uts-paw2-naufalsamihnajasyi",
+  "version": "1.0.0",
+  "description": "RESTful API Organisasi Mahasiswa - Topik 32",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node seed.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "organisasi-mahasiswa",
+    "paw2"
+  ],
+  "author": "Naufal Samih Najasyi",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
