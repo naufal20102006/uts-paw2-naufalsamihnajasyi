@@ -23,6 +23,11 @@ CORS_ORIGIN=http://localhost:5173
 Jangan mengunggah file `.env` ke GitHub.
 
 ## Endpoint Ormawa
+   ## Alasan desain data model
+   | Data | Pola | Alasan |
+   |---|---|---|
+   | `penanggungJawab` (`nama`, `nim`) | Embedding | Selalu dibaca bersama Kegiatan, hanya dua field teks, dan tidak dipakai terpisah dari kegiatannya, sehingga satu query cukup tanpa join. `_id` dimatikan karena bukan dokumen mandiri. |
+   | `ormawaId` → Ormawa | Referencing | Satu Ormawa punya banyak Kegiatan dan datanya (`kode`, `nama`) dipakai bersama serta bisa berubah. Disimpan di collection sendiri agar tidak terduplikasi, kode tetap unik, dan di-populate saat `GET /kegiatan/:id`. |
 | Method | Endpoint | Keterangan |
 |---|---|---|
 | POST | `/ormawa` | Membuat Ormawa dengan `kode` dan `nama` |
